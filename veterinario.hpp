@@ -12,6 +12,9 @@ class Veterinario{
     string data;
 
   public:
+    Veterinario ();//construtor padrão
+    Veterinario (string nome, string crmv, string data);//construtor parametrizado
+    ~Veterinario();//destrutor
     string getNome();
     void setNome(string nome);
     string getCrmv();

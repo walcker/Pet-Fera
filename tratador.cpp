@@ -3,6 +3,15 @@
 
 using namespace std;
 
+Tratador::Tratador(){
+  this->nome = "A definir";
+}//construtor padrão
+
+Tratador::Tratador(string nome, string cor, string data):nome(nome),cor(cor),data(data){}//construtor parametrizado
+
+Tratador::~Tratador(){
+  cout << "Arquivo fechado" << endl;
+}//destrutor
 string Tratador::getNome(){
   return this->nome;
 }

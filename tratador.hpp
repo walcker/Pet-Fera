@@ -12,6 +12,9 @@ class Tratador{
     string data;
 
   public:
+    Tratador ();//construtor padrão
+    Tratador (string nome, string cor, string data);//construtor parametrizado
+    ~Tratador();//destrutor
     string getNome();
     void setNome(string nome);
     string getCor();

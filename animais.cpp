@@ -3,6 +3,15 @@
 
 using namespace std;
 
+Animais::Animais(){
+  this->classe = "A definir";
+}//construtor padrão
+
+Animais::Animais(string classe, string especie, string sexo, string habitat, string extincao):classe(classe), especie(especie), sexo(sexo), habitat(habitat), extincao(extincao){}//construtor parametrizado
+
+Animais::~Animais(){
+  cout << "Arquivo fechado" << endl;//destrutor
+}
 string Animais::getClasse(){
   return this->classe;
 }

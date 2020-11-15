@@ -16,6 +16,9 @@ class Animais{
     string extincao;
 
   public:
+    Animais ();//construtor padrão
+    Animais (string classe, string especie, string sexo, string habitat, string extincao);//construtor parametrizadado
+    ~Animais();//destrutor
     string getClasse();
     void setClasse(string classe);
     string getEspecie();
