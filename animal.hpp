@@ -1,5 +1,5 @@
-#ifndef _ANIMAIS_
-#define _ANIMAIS_
+#ifndef _ANIMAL_
+#define _ANIMAL_
 
 #include <iostream>
 #include "veterinario.hpp"
@@ -7,8 +7,9 @@
 
 using namespace std;
 
-class Animais{
+class Animal{
   private:
+    string id;
     string classe;
     string especie;
     string sexo;
@@ -16,9 +17,11 @@ class Animais{
     string extincao;
 
   public:
-    Animais ();//construtor padrão
-    Animais (string classe, string especie, string sexo, string habitat, string extincao);//construtor parametrizadado
-    ~Animais();//destrutor
+    Animal ();//construtor padrão
+    Animal (string id, string classe, string especie, string sexo, string habitat, string extincao);//construtor parametrizadado
+    ~Animal();//destrutor
+    string getId();
+    void setId(string id);
     string getClasse();
     void setClasse(string classe);
     string getEspecie();
