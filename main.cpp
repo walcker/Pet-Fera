@@ -26,20 +26,20 @@ void limpaTela()
 #endif
 }
 
-/*void menuPrincipal(Agencia* ag) {
+void menuPrincipal(Animal* an) {
 	char opcao;
 	limpaTela();
 	do {	 
 		cout<< endl << "Opções: ";
 		cout<< endl << "========";
-		cout<< endl << "C - Criar uma conta.";
-		cout<< endl << "R - Remover uma conta.";
-		cout<< endl << "L - Listar contas.";
-		cout<< endl << "S - Efetuar saque.";
+		cout<< endl << "A - Cadastrar um animal.";
+    cout<< endl << "L - Listar animais.";
+		/*cout<< endl << "R - Remover uma conta.";
+		  cout<< endl << "S - Efetuar saque.";
 		cout<< endl << "D - Efetuar depósito.";
 		cout<< endl << "T - Efetuar transferência entre contas.";
 		cout<< endl << "I - Imprimir saldo.";
-		cout<< endl << "E - Imprimir extrato.";
+		cout<< endl << "E - Imprimir extrato.";*/
 		cout<< endl << "---------";
 		cout<< endl << endl << "X - Encerrar.";
 
@@ -51,10 +51,13 @@ void limpaTela()
 		 
 		switch(opcao)
 		{
-			case 'C' :
-			case 'c' :{ ag->criarConta();}
+			case 'A' :
+			case 'a' :{ an->criarAnimal();}
 			break;
-			case 'R' :
+      case 'L' :
+			case 'l' :{ an->listarAnimal();}
+			break;
+			/*case 'R' :
 			case 'r' :{ ag->removeConta();}
 			break;
 			case 'L' :
@@ -74,7 +77,7 @@ void limpaTela()
 			break;
 			case 'E' :
 			case 'e' :{ ag->extrato();}
-			break;
+			break;*/
 			case 'X' :
 			case 'x' :{ return;}
 			break;
@@ -86,23 +89,48 @@ void limpaTela()
 		limpaTela();
 	
 	} while (opcao != 'X' && opcao !='x');
-}*/
+}
+
+void 
+Animal::criarAnimal() {
+  string nome;
+	string classe;
+  string especie;
+  string sexo;
+  string habitat;
+  string extincao;
+
+  cout << "Nome: " << endl;
+  cin >> nome;
+  cout << "Classe: " << endl;
+  cin >> classe;
+  cout << "Especie: " << endl;
+  cin >> especie;
+  cout << "Sexo: " << endl;
+  cin >> sexo;
+  cout << "Habitat: " << endl;
+  cin >> habitat;
+  cout << "Extinção: " << endl;
+  cin >> extincao;
+}
+void Animal::listarAnimal() {
+		cout << nome << endl;
+    cout << classe << endl;
+    cout << especie << endl;
+    cout << sexo << endl;
+    cout << habitat << endl;
+    cout << extincao << endl;
+    pausar();
+}
 
 int main(int argc, char const *argv[]){
  
-  Veterinario* maria = new Veterinario("Maria Antonieta","25843","02/04/1999");//usando construtor
-      
-  Veterinario* jaspion = new Veterinario("Jaspion police", "65432", "05/12/2000");//usando construtor
-    
-  Tratador* lampiao = new Tratador("Lampião bandido", "Azul", "01/04/2005");//usando construtor
-  
-  Animal* capivara1 = new Animal("0001", "Mamífero", "Capivara", "Fêmea", "Silvestre nativo", "ameaçada");//usando construtor
-      
-  cout << endl;
-  cout << "Veterinarios: " << jaspion->getNome() << endl;
-  cout << "Veterinarios: " << maria->getNome() << endl;
-  cout << "Tratadores: " << lampiao->getNome() << endl;
-  cout << "Animal: " << capivara1->getEspecie() << endl;
+  Animal* an1 = new Animal("Vermelhinha","Mamífero","Capivara", "Fêmea", "Nativo", "Em extinção");
+
+	menuPrincipal(an1);
 
   return 0;
 }
+
+
+/*Classes: Funcionario, Tratador, Veterinario, Animal, Anfíbio, Reptil, Ave, Mamífero, Silvestre (opicional), Nativo, Exotico, Domestico (necessário ???), AnfíbioNativo, AnfíbioExotico ... (repete para cada classe de Animal)...*/

@@ -9,19 +9,19 @@ using namespace std;
 
 class Animal{
   private:
-    string id;
+    string nome;
     string classe;
     string especie;
     string sexo;
     string habitat;
     string extincao;
-
+    
   public:
     Animal ();//construtor padrão
-    Animal (string id, string classe, string especie, string sexo, string habitat, string extincao);//construtor parametrizadado
+    Animal (string nome, string classe, string especie, string sexo, string habitat, string extincao);//construtor parametrizadado
     ~Animal();//destrutor
-    string getId();
-    void setId(string id);
+    string getNome();
+    void setNome(string nome);
     string getClasse();
     void setClasse(string classe);
     string getEspecie();
@@ -32,6 +32,8 @@ class Animal{
     void setHabitat(string habitat);
     string getExtincao();
     void setExtincao(string extincao);
+    void criarAnimal();
+    void listarAnimal();
         
 };
 

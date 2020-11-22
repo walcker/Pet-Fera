@@ -1,22 +1,24 @@
 #include <iostream>
+
 #include "animal.hpp"
 
 using namespace std;
+
 
 Animal::Animal(){
   this->classe = "A definir";
 }//construtor padrão
 
-Animal::Animal(string id, string classe, string especie, string sexo, string habitat, string extincao):classe(classe), especie(especie), sexo(sexo), habitat(habitat), extincao(extincao){}//construtor parametrizado
+Animal::Animal(string nome, string classe, string especie, string sexo, string habitat, string extincao):classe(classe), especie(especie), sexo(sexo), habitat(habitat), extincao(extincao){}//construtor parametrizado
 
 Animal::~Animal(){
   cout << "Arquivo fechado" << endl;//destrutor
 }
-string Animal::getId(){
-  return this->id;
+string Animal::getNome(){
+  return this->nome;
 }
-void Animal::setId(string id){
-  this->id = id;
+void Animal::setNome(string nome){
+  this->nome = nome;
 }
 string Animal::getClasse(){
   return this->classe;
