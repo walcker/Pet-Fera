@@ -32,8 +32,8 @@ void menuPrincipal(Animal* an) {
 	do {	 
 		cout<< endl << "Opções: ";
 		cout<< endl << "========";
-		cout<< endl << "A - Cadastrar um animal.";
-    cout<< endl << "L - Listar animais.";
+		cout<< endl << "1 - Cadastrar um animal.";
+    cout<< endl << "2 - Listar animais.";
 		/*cout<< endl << "R - Remover uma conta.";
 		  cout<< endl << "S - Efetuar saque.";
 		cout<< endl << "D - Efetuar depósito.";
@@ -51,11 +51,9 @@ void menuPrincipal(Animal* an) {
 		 
 		switch(opcao)
 		{
-			case 'A' :
-			case 'a' :{ an->criarAnimal();}
+			case '1' :{ an->criarAnimal();}
 			break;
-      case 'L' :
-			case 'l' :{ an->listarAnimal();}
+      case '2' :{ an->listarAnimal();}
 			break;
 			/*case 'R' :
 			case 'r' :{ ag->removeConta();}
