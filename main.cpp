@@ -118,6 +118,7 @@ void Animal::listarAnimal() {
     cout << sexo << endl;
     cout << habitat << endl;
     cout << extincao << endl;
+    cout << "Animal cadastrado" << endl;
     pausar();
 }
 
