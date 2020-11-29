@@ -9,7 +9,7 @@ Animal::Animal(){
   this->classe = "A definir";
 }//construtor padrão
 
-Animal::Animal(string nome, string classe, string especie, string sexo, string habitat, string extincao):classe(classe), especie(especie), sexo(sexo), habitat(habitat), extincao(extincao){}//construtor parametrizado
+Animal::Animal(string nome, string classe, string especie, string sexo, string habitat, string extincao, string veterinario, string tratador):classe(classe), especie(especie), sexo(sexo), habitat(habitat), extincao(extincao), veterinario(veterinario), tratador(tratador){}//construtor parametrizado
 
 Animal::~Animal(){
   cout << "Arquivo fechado" << endl;//destrutor
@@ -49,4 +49,16 @@ string Animal::getExtincao(){
 }
 void Animal::setExtincao(string extincao){
   this->extincao = extincao;
+}
+string Animal::getVeterinario(){
+  return this->veterinario;
+}
+void Animal::setVeterinario(string veterinario){
+  this->veterinario = veterinario;
+}
+string Animal::getTratador(){
+  return this->tratador;
+}
+void Animal::setTratador(string tratador){
+  this->tratador = tratador;
 }

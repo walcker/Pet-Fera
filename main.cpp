@@ -97,34 +97,42 @@ Animal::criarAnimal() {
   string sexo;
   string habitat;
   string extincao;
+  string veterinario;
+  string tratador;
 
   cout << "Nome: " << endl;
-  cin >> nome;
+  cin >> this->nome;
   cout << "Classe: " << endl;
-  cin >> classe;
+  cin >> this->classe;
   cout << "Especie: " << endl;
-  cin >> especie;
+  cin >> this->especie;
   cout << "Sexo: " << endl;
-  cin >> sexo;
+  cin >> this->sexo;
   cout << "Habitat: " << endl;
-  cin >> habitat;
+  cin >> this->habitat;
   cout << "Extinção: " << endl;
-  cin >> extincao;
+  cin >> this->extincao;
+  cout << "Veterinário: " << endl;
+  cin >> this->veterinario;
+  cout << "Tratador: " << endl;
+  cin >> this->tratador;
 }
-void Animal::listarAnimal() {
+void 
+Animal::listarAnimal() {
 		cout << nome << endl;
     cout << classe << endl;
     cout << especie << endl;
     cout << sexo << endl;
     cout << habitat << endl;
     cout << extincao << endl;
-    cout << "Animal cadastrado" << endl;
+    cout << veterinario << endl;
+    cout << tratador << endl;
     pausar();
 }
 
 int main(int argc, char const *argv[]){
  
-  Animal* an1 = new Animal("Vermelhinha","Mamífero","Capivara", "Fêmea", "Nativo", "Em extinção");
+  Animal* an1 = new Animal("Vermelhinha","Mamífero","Capivara", "Fêmea", "Nativo", "Em extinção","José da Veiga", "Johny Silverhand");
 
 	menuPrincipal(an1);
 

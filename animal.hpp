@@ -15,10 +15,12 @@ class Animal{
     string sexo;
     string habitat;
     string extincao;
+    string veterinario;
+    string tratador;
     
   public:
     Animal ();//construtor padrão
-    Animal (string nome, string classe, string especie, string sexo, string habitat, string extincao);//construtor parametrizadado
+    Animal (string nome, string classe, string especie, string sexo, string habitat, string extincao, string veterinario, string tratador);//construtor parametrizadado
     ~Animal();//destrutor
     string getNome();
     void setNome(string nome);
@@ -32,6 +34,10 @@ class Animal{
     void setHabitat(string habitat);
     string getExtincao();
     void setExtincao(string extincao);
+    string getVeterinario();
+    void setVeterinario(string veterinario);
+    string getTratador();
+    void setTratador(string tratador);
     void criarAnimal();
     void listarAnimal();
         
