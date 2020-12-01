@@ -1,3 +1,8 @@
+//Grupo: Adote Animais
+//Emerson de Almeida da Silva
+//Walcker da silva gomes
+//https://youtu.be/yfjEjVgIQuU
+
 #include <iostream>
 
 #include "veterinario.hpp"
@@ -6,7 +11,7 @@
 
 using namespace std;
 
-void pausar() {
+void pausar() {//Função para parar a tela
 #if defined _WIN32
     system("pause");
 #elif defined (__LINUX__) || defined(__gnu_linux__) || defined(__linux__)
@@ -15,7 +20,7 @@ void pausar() {
     system("read -n 1 -s -p \"Pressione qualquer tecla para continuar...\"");
 #endif
 }
-void limpaTela()
+void limpaTela()//Função para limpar a tela
 {
 #if defined _WIN32
     system("cls");
