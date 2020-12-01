@@ -1,6 +1,5 @@
 #include <iostream>
 #include "tratador.hpp"
-#include "animal.hpp"
 
 using namespace std;
 
