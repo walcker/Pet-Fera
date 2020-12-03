@@ -136,7 +136,7 @@ void
     void receberVeterinario(Veterinario* an);
 }
 
-void receberVeterinario(Veterinario* an){
+/*void receberVeterinario(Veterinario* an){
 
   string nome;
   string crmv;
@@ -158,7 +158,7 @@ void receberVeterinario(Veterinario* an){
   cout << "Especialidade: ";
   cin >>especialidade;
   an->setEspecialidade(especialidade);
-}
+}*/
 
 void 
 Animal::listarAnimal() {

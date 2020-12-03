@@ -9,18 +9,22 @@ class Tratador{
   private:
     string nome;
     string cor;
-    string data;
+    string especialidade;
 
   public:
     Tratador ();//construtor padrão
-    Tratador (string nome, string cor, string data);//construtor parametrizado
+    Tratador (string nome, string cor, string especialidade);//construtor parametrizado
     ~Tratador();//destrutor
+    
     string getNome();
     void setNome(string nome);
+    
     string getCor();
     void setCor(string cor);
-    string getData();
-    void setData(string data);
+    
+    string getEspecialidade();
+    void setEspecialidade(string especialidade);
+    
     void criarTratador();
     void listarTratador();
         

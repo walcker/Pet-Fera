@@ -38,17 +38,17 @@ void menuPrincipal(Animal* an) {
 	do {	 
 		cout<< endl << "Seja Bem vindo(a) a loja AdoteAnimais!\n ";
 		cout<< endl << "Opções: ";
-		cout<< endl << "Cadastrar um animal";
+		cout<< endl << "Cadastrar um animal\n";
 		cout<< endl << "1 - Cadastrar um animal.";
-    cout<< endl << "2 - Listar animais.";
-    cout<< endl << "3 - Cadastrar Veterinário.";
+    	cout<< endl << "2 - Listar animais.";/*
+    	cout<< endl << "3 - Cadastrar Veterinário.";
 		cout<< endl << "4 - Listar Veterinário.";
 		cout<< endl << "5 - Cadastrar Tratador.";
 		cout<< endl << "6 - Listar Tratador.";
 		cout<< endl << "7 - Remover Veterinário.";
-		cout<< endl << "8 - Remover Tratador.";
-    cout<< endl << "---------";
-		cout<< endl << endl << "X - Encerrar.";
+		cout<< endl << "8 - Remover Tratador.";*/
+    	cout<< endl << "---------";
+		cout<< endl << endl << "X - Ir para Tratador.";
 
 		cout<< endl << endl << "Selecione a opção: ";
 
@@ -59,7 +59,7 @@ void menuPrincipal(Animal* an) {
 		{
 			case '1' :{ an->criarAnimal();}
 			break;
-      case '2' :{ an->listarAnimal();}
+      		case '2' :{ an->listarAnimal();}
 			break;
       /*case '3' :{ an->cadastarVeterinario();}
 			break;
@@ -98,17 +98,17 @@ void menuTratador(Tratador* tr) {
 	do {	 
 		cout<< endl << "Seja Bem vindo(a) a loja AdoteAnimais!\n ";
 		cout<< endl << "Opções: ";
-		cout<< endl << "Cadastrar um Tratador";
+		cout<< endl << "Cadastrar um Tratador\n";
 		cout<< endl << "1 - Cadastrar um tratador.";
-    cout<< endl << "2 - Listar tratador.";
-    cout<< endl << "3 - Cadastrar Veterinário.";
+    	cout<< endl << "2 - Listar tratador.";/*
+    	cout<< endl << "3 - Cadastrar Veterinário.";
 		cout<< endl << "4 - Listar Veterinário.";
 		cout<< endl << "5 - Cadastrar Tratador.";
 		cout<< endl << "6 - Listar Tratador.";
 		cout<< endl << "7 - Remover Veterinário.";
-		cout<< endl << "8 - Remover Tratador.";
-    cout<< endl << "---------";
-		cout<< endl << endl << "X - Encerrar.";
+		cout<< endl << "8 - Remover Tratador.";*/
+    	cout<< endl << "---------";
+		cout<< endl << endl << "X - Ir para Veterinário.";
 
 		cout<< endl << endl << "Selecione a opção: ";
 
@@ -119,12 +119,11 @@ void menuTratador(Tratador* tr) {
 		{
 			case '1' :{ tr->criarTratador();}
 			break;
-      case '2' :{ tr->listarTratador();}
+      		case '2' :{ tr->listarTratador();}
+			break;/*
+      	  	case '3' :{ tr->criarTratador();}
 			break;
-      /*case '3' :{ an->cadastarVeterinario();}
-			break;
-			case 'R' :
-			case 'r' :{ an->removeAnimal();}
+			case '4' :{ an->removeAnimal();}
 			break;
 			case 'L' :
 			case 'l' :{ an->cadastarTratador();}
@@ -158,16 +157,16 @@ void menuVeterinario(Veterinario* vt) {
 	do {	 
 		cout<< endl << "Seja Bem vindo(a) a loja AdoteAnimais!\n ";
 		cout<< endl << "Opções: ";
-		cout<< endl << "Cadastrar um Veterinário";
+		cout<< endl << "Cadastrar um Veterinário\n";
 		cout<< endl << "1 - Cadastrar um veterinario.";
-    cout<< endl << "2 - Listar veterinario.";
-    cout<< endl << "3 - Cadastrar Veterinário.";
+    	cout<< endl << "2 - Listar veterinario.";/*
+    	cout<< endl << "3 - Cadastrar Veterinário.";
 		cout<< endl << "4 - Listar Veterinário.";
 		cout<< endl << "5 - Cadastrar Tratador.";
 		cout<< endl << "6 - Listar Tratador.";
 		cout<< endl << "7 - Remover Veterinário.";
-		cout<< endl << "8 - Remover Tratador.";
-    cout<< endl << "---------";
+		cout<< endl << "8 - Remover Tratador.";*/
+    	cout<< endl << "---------";
 		cout<< endl << endl << "X - Encerrar.";
 
 		cout<< endl << endl << "Selecione a opção: ";
@@ -179,7 +178,7 @@ void menuVeterinario(Veterinario* vt) {
 		{
 			case '1' :{ vt->criarVeterinario();}
 			break;
-      case '2' :{ vt->listarVeterinario();}
+      		case '2' :{ vt->listarVeterinario();}
 			break;
       /*case '3' :{ an->cadastarVeterinario();}
 			break;
@@ -220,7 +219,7 @@ int main(int argc, char const *argv[]){
 
   Veterinario* vt = new Veterinario("Maria", "8456", 26, "Pequenos animais");
 
-	menuPrincipal(an);
+  menuPrincipal(an);
   menuTratador(tr);
   menuVeterinario(vt);
 

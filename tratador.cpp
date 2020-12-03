@@ -7,7 +7,7 @@ Tratador::Tratador(){
   this->nome = "A definir";
 }//construtor padrão
 
-Tratador::Tratador(string nome, string cor, string data):nome(nome),cor(cor),data(data){}//construtor parametrizado
+Tratador::Tratador(string nome, string cor, string especialidade):nome(nome),cor(cor), especialidade(especialidade){}//construtor parametrizado
 
 Tratador::~Tratador(){
   cout << "Arquivo fechado" << endl;
@@ -24,24 +24,24 @@ string Tratador::getCor(){
 void Tratador::setCor(string cor){
   this->cor = cor;
 }
-string Tratador::getData(){
-  return this->data;
+string Tratador::getEspecialidade(){
+  return this->especialidade;
 }
-void Tratador::setData(string data){
-  this->data = data;
+void Tratador::setEspecialidade(string especialidade){
+  this->especialidade = especialidade;
 }
 void 
 Tratador::criarTratador() {
   string nome;
   string cor;
-  string data;
+  string especialidade;
   
   cout << "Nome: " << endl;
   cin >> this->nome;
   cout << "Cor: " << endl;
   cin >> this->cor;
-  cout << "Data: " << endl;
-  cin >> this->data;
+  cout << "Especialidade: " << endl;
+  cin >> this->especialidade;
 }
 void 
 Tratador::listarTratador() {
@@ -52,7 +52,7 @@ Tratador::listarTratador() {
   } else {
     cout << nome << endl;
     cout << cor << endl;
-    cout << data << endl;
+    cout << especialidade << endl;
     cin >> nome;
     //pausar();
   }

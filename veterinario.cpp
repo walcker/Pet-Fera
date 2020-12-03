@@ -60,7 +60,7 @@ Veterinario::criarVeterinario() {
   cin >> this->nome;
   cout << "CRMV: " << endl;
   cin >> this->crmv;
-  cout << "Idade: " << endl;
+  cout << "Idade (insira somente números): " << endl;
   cin >> this->idade;
   cout << "Especialidade: " << endl;
   cin >> this->especialidade;
