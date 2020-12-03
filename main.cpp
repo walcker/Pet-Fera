@@ -38,9 +38,15 @@ void menuPrincipal(Animal* an) {
 	do {	 
 		cout<< endl << "Seja Bem vindo(a) a loja AdoteAnimais!\n ";
 		cout<< endl << "Opções: ";
-		cout<< endl << "========";
+		cout<< endl << "Cadastrar um animal";
 		cout<< endl << "1 - Cadastrar um animal.";
     cout<< endl << "2 - Listar animais.";
+    cout<< endl << "3 - Cadastrar Veterinário.";
+		cout<< endl << "4 - Listar Veterinário.";
+		cout<< endl << "5 - Cadastrar Tratador.";
+		cout<< endl << "6 - Listar Tratador.";
+		cout<< endl << "7 - Remover Veterinário.";
+		cout<< endl << "8 - Remover Tratador.";
     cout<< endl << "---------";
 		cout<< endl << endl << "X - Encerrar.";
 
@@ -55,6 +61,26 @@ void menuPrincipal(Animal* an) {
 			break;
       case '2' :{ an->listarAnimal();}
 			break;
+      /*case '3' :{ an->cadastarVeterinario();}
+			break;
+			case 'R' :
+			case 'r' :{ an->removeAnimal();}
+			break;
+			case 'L' :
+			case 'l' :{ an->cadastarTratador();}
+			break;
+			case 'S' :
+			case 's' :{ ag->removeTratador();}
+			break;			
+			case 'T' :
+			case 't' :{ an->removeVeterinario();}
+			break;
+			case 'I' :
+			case 'i' :{ an->listarTratador();}
+			break;
+			case 'E' :
+			case 'e' :{ an->listarVeterinario();}
+			break;*/
 			case 'X' :
 			case 'x' :{ return;}
 			break;
@@ -72,9 +98,15 @@ void menuTratador(Tratador* tr) {
 	do {	 
 		cout<< endl << "Seja Bem vindo(a) a loja AdoteAnimais!\n ";
 		cout<< endl << "Opções: ";
-		cout<< endl << "========";
+		cout<< endl << "Cadastrar um Tratador";
 		cout<< endl << "1 - Cadastrar um tratador.";
     cout<< endl << "2 - Listar tratador.";
+    cout<< endl << "3 - Cadastrar Veterinário.";
+		cout<< endl << "4 - Listar Veterinário.";
+		cout<< endl << "5 - Cadastrar Tratador.";
+		cout<< endl << "6 - Listar Tratador.";
+		cout<< endl << "7 - Remover Veterinário.";
+		cout<< endl << "8 - Remover Tratador.";
     cout<< endl << "---------";
 		cout<< endl << endl << "X - Encerrar.";
 
@@ -89,6 +121,26 @@ void menuTratador(Tratador* tr) {
 			break;
       case '2' :{ tr->listarTratador();}
 			break;
+      /*case '3' :{ an->cadastarVeterinario();}
+			break;
+			case 'R' :
+			case 'r' :{ an->removeAnimal();}
+			break;
+			case 'L' :
+			case 'l' :{ an->cadastarTratador();}
+			break;
+			case 'S' :
+			case 's' :{ ag->removeTratador();}
+			break;			
+			case 'T' :
+			case 't' :{ an->removeVeterinario();}
+			break;
+			case 'I' :
+			case 'i' :{ an->listarTratador();}
+			break;
+			case 'E' :
+			case 'e' :{ an->listarVeterinario();}
+			break;*/
 			case 'X' :
 			case 'x' :{ return;}
 			break;
@@ -106,9 +158,15 @@ void menuVeterinario(Veterinario* vt) {
 	do {	 
 		cout<< endl << "Seja Bem vindo(a) a loja AdoteAnimais!\n ";
 		cout<< endl << "Opções: ";
-		cout<< endl << "========";
+		cout<< endl << "Cadastrar um Veterinário";
 		cout<< endl << "1 - Cadastrar um veterinario.";
     cout<< endl << "2 - Listar veterinario.";
+    cout<< endl << "3 - Cadastrar Veterinário.";
+		cout<< endl << "4 - Listar Veterinário.";
+		cout<< endl << "5 - Cadastrar Tratador.";
+		cout<< endl << "6 - Listar Tratador.";
+		cout<< endl << "7 - Remover Veterinário.";
+		cout<< endl << "8 - Remover Tratador.";
     cout<< endl << "---------";
 		cout<< endl << endl << "X - Encerrar.";
 
@@ -123,6 +181,26 @@ void menuVeterinario(Veterinario* vt) {
 			break;
       case '2' :{ vt->listarVeterinario();}
 			break;
+      /*case '3' :{ an->cadastarVeterinario();}
+			break;
+			case 'R' :
+			case 'r' :{ an->removeAnimal();}
+			break;
+			case 'L' :
+			case 'l' :{ an->cadastarTratador();}
+			break;
+			case 'S' :
+			case 's' :{ ag->removeTratador();}
+			break;			
+			case 'T' :
+			case 't' :{ an->removeVeterinario();}
+			break;
+			case 'I' :
+			case 'i' :{ an->listarTratador();}
+			break;
+			case 'E' :
+			case 'e' :{ an->listarVeterinario();}
+			break;*/
 			case 'X' :
 			case 'x' :{ return;}
 			break;
