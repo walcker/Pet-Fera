@@ -30,6 +30,9 @@ class Veterinario{
 
     string getEspecialidade();
     void setEspecialidade(string especialidade);
+
+    void criarVeterinario();
+    void listarVeterinario();
         
 };
 

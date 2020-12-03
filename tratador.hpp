@@ -21,6 +21,8 @@ class Tratador{
     void setCor(string cor);
     string getData();
     void setData(string data);
+    void criarTratador();
+    void listarTratador();
         
 };
 

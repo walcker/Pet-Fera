@@ -30,3 +30,30 @@ string Tratador::getData(){
 void Tratador::setData(string data){
   this->data = data;
 }
+void 
+Tratador::criarTratador() {
+  string nome;
+  string cor;
+  string data;
+  
+  cout << "Nome: " << endl;
+  cin >> this->nome;
+  cout << "Cor: " << endl;
+  cin >> this->cor;
+  cout << "Data: " << endl;
+  cin >> this->data;
+}
+void 
+Tratador::listarTratador() {
+  //this->printTitle("Listagem de Animais");
+
+  if (this->nome.size()==0){
+    cout << "Não há tratadores cadastrados." << endl;
+  } else {
+    cout << nome << endl;
+    cout << cor << endl;
+    cout << data << endl;
+    cin >> nome;
+    //pausar();
+  }
+}

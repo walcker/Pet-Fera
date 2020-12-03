@@ -49,3 +49,34 @@ string Veterinario::getEspecialidade(){
 void Veterinario::setEspecialidade(string especialidade){
   this->especialidade = especialidade;
 }
+void 
+Veterinario::criarVeterinario() {
+  string nome;
+  string crmv;
+  short idade;  
+  string especialidade;
+  
+  cout << "Nome: " << endl;
+  cin >> this->nome;
+  cout << "CRMV: " << endl;
+  cin >> this->crmv;
+  cout << "Idade: " << endl;
+  cin >> this->idade;
+  cout << "Especialidade: " << endl;
+  cin >> this->especialidade;
+}
+void 
+Veterinario::listarVeterinario() {
+  //this->printTitle("Listagem de Animais");
+
+  if (this->nome.size()==0){
+    cout << "Não há veterinários cadastrados." << endl;
+  } else {
+    cout << nome << endl;
+    cout << crmv << endl;
+    cout << idade << endl;
+    cout << especialidade << endl;
+    cin >> nome;
+    //pausar();
+  }
+}

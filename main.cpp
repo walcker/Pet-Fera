@@ -40,14 +40,8 @@ void menuPrincipal(Animal* an) {
 		cout<< endl << "Opções: ";
 		cout<< endl << "========";
 		cout<< endl << "1 - Cadastrar um animal.";
-    	cout<< endl << "2 - Listar animais.";
-    	cout<< endl << "3 - Cadastrar Veterinário.";
-		cout<< endl << "4 - Listar Veterinário.";
-		cout<< endl << "5 - Cadastrar Tratador.";
-		cout<< endl << "6 - Listar Tratador.";
-		cout<< endl << "7 - Remover Veterinário.";
-		cout<< endl << "8 - Remover Veterinário.";
-		cout<< endl << "---------";
+    cout<< endl << "2 - Listar animais.";
+    cout<< endl << "---------";
 		cout<< endl << endl << "X - Encerrar.";
 
 		cout<< endl << endl << "Selecione a opção: ";
@@ -59,28 +53,76 @@ void menuPrincipal(Animal* an) {
 		{
 			case '1' :{ an->criarAnimal();}
 			break;
-      		case '2' :{ an->listarAnimal();}
+      case '2' :{ an->listarAnimal();}
 			break;
-			/*case '3' :{ an->cadastarVeterinario();}
+			case 'X' :
+			case 'x' :{ return;}
 			break;
-			case 'R' :
-			case 'r' :{ an->removeAnimal();}
+			default : cout << endl << "Opção inválida!";
+		}
+		cout << endl;
+		pausar();
+		limpaTela();
+	} while (opcao != 'X' && opcao !='x');
+}
+
+void menuTratador(Tratador* tr) {
+	char opcao;
+	limpaTela();
+	do {	 
+		cout<< endl << "Seja Bem vindo(a) a loja AdoteAnimais!\n ";
+		cout<< endl << "Opções: ";
+		cout<< endl << "========";
+		cout<< endl << "1 - Cadastrar um tratador.";
+    cout<< endl << "2 - Listar tratador.";
+    cout<< endl << "---------";
+		cout<< endl << endl << "X - Encerrar.";
+
+		cout<< endl << endl << "Selecione a opção: ";
+
+		cin >> opcao;
+		limpaTela();
+		 
+		switch(opcao)
+		{
+			case '1' :{ tr->criarTratador();}
 			break;
-			case 'L' :
-			case 'l' :{ an->cadastarTratador();}
+      case '2' :{ tr->listarTratador();}
 			break;
-			case 'S' :
-			case 's' :{ ag->removeTratador();}
-			break;			
-			case 'T' :
-			case 't' :{ an->removeVeterinario();}
+			case 'X' :
+			case 'x' :{ return;}
 			break;
-			case 'I' :
-			case 'i' :{ an->listarTratador();}
+			default : cout << endl << "Opção inválida!";
+		}
+		cout << endl;
+		pausar();
+		limpaTela();
+	} while (opcao != 'X' && opcao !='x');
+}
+
+void menuVeterinario(Veterinario* vt) {
+	char opcao;
+	limpaTela();
+	do {	 
+		cout<< endl << "Seja Bem vindo(a) a loja AdoteAnimais!\n ";
+		cout<< endl << "Opções: ";
+		cout<< endl << "========";
+		cout<< endl << "1 - Cadastrar um veterinario.";
+    cout<< endl << "2 - Listar veterinario.";
+    cout<< endl << "---------";
+		cout<< endl << endl << "X - Encerrar.";
+
+		cout<< endl << endl << "Selecione a opção: ";
+
+		cin >> opcao;
+		limpaTela();
+		 
+		switch(opcao)
+		{
+			case '1' :{ vt->criarVeterinario();}
 			break;
-			case 'E' :
-			case 'e' :{ an->listarVeterinario();}
-			break;*/
+      case '2' :{ vt->listarVeterinario();}
+			break;
 			case 'X' :
 			case 'x' :{ return;}
 			break;
@@ -96,7 +138,13 @@ int main(int argc, char const *argv[]){
  
   Animal* an = new Animal("Vermelhinha","Mamífero","Capivara", "Fêmea", "Nativo", "Em extinção","José da Veiga", "Johny Silverhand");
 
+  Tratador* tr = new Tratador("João", "Azul", "01/04/2000");
+
+  Veterinario* vt = new Veterinario("Maria", "8456", 26, "Pequenos animais");
+
 	menuPrincipal(an);
+  menuTratador(tr);
+  menuVeterinario(vt);
 
   return 0;
 }

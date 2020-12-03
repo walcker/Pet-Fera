@@ -164,9 +164,9 @@ void
 Animal::listarAnimal() {
   //this->printTitle("Listagem de Animais");
 
-  //if (this->nome.size()==0){
+  if (this->nome.size()==0){
     cout << "Não há animais cadastrados." << endl;
-  } /*else {
+  } else {
     cout << nome << endl;
     cout << classe << endl;
     cout << especie << endl;
@@ -175,10 +175,11 @@ Animal::listarAnimal() {
     cout << extincao << endl;
     cout << veterinario << endl;
     cout << tratador << endl;
+    cin >> nome;
     //pausar();
   }
 }
-void 
+/*void 
 Animal::printTitle(string title) {
   int spaceTotal = 50;
   int spaceOnLeft = (spaceTotal-title.length())/2;
